@@ -1,9 +1,39 @@
 <body>
 <h1>Books</h1>
 
-<div>
-  <
+<div class="columns">
+  <p class="column">Title</p>
+  <p class="column">Body</p>
+  <p class="column"></p>
 </div>
 
+  <div class="table">
+    <% @books.each do |book| %>
+      <div class="book-title"><%= book.title %></div>
+      <div class="book-body"><%= book.body %></div>
+      <%=link_to "Show", book_path(book.id), class:"link" %>
+      <%=link_to "Edit", edit_book_path(book.id), class:"link" %>
+      <%=link_to "Destroy", book_path(book.id), method: :delete, class:"link","data-confirm" => "Are you Sure?" %>
+    <% end %>
+  </div>
+
+<div class="create-box">
+  <div class="create-title">
+    <h2>New book</h2>
+  </div>
+
+  <div class="create-form">
+    <%=form_with model:@book, url:'/books', local:true do |newBook| %>
+    <p class="title">Title</p>
+    <%=newBook.text_field :title %>
+    <p class="Body">Body</p>
+    <%=newBook.text_area :body %>
+  </div>
+
+  <div class="create-submit">
+    <%=newBook.submit 'Create Book' %>
+  </div>
+<% end %>
+</div>
 
 </body>
