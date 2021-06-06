@@ -1,3 +1,36 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 26px;
+}
+
+.bookers-title{
+  font-weight: 900;
+}
+
+body{
+  margin:33px;
+}
+
+.bookers-title-in-box{
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.bookers-description{
+  margin:33px;
+}
+
+.link{
+  margin:33px;
+  color :#666666;
+}
+
+.link:hover{
+  color: white;
+  background-color: black;
+}
