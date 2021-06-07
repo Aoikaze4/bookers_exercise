@@ -23,15 +23,15 @@
   </div>
 
   <div class="create-form">
-    <%=form_with model:@book, url:'/books', local:true do |newBook| %>
+    <%=form_with model:@book, local:true do |book| %>
     <p class="title">Title</p>
-    <%=newBook.text_field :title %>
+    <%=book.text_field :title %>
     <p class="Body">Body</p>
-    <%=newBook.text_area :body %>
+    <%=book.text_area :body %>
   </div>
 
   <div class="create-submit">
-    <%=newBook.submit 'Create Book' %>
+    <%=book.submit 'Create Book' %>
   </div>
 <% end %>
 </div>
