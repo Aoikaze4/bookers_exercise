@@ -1,10 +1,14 @@
 .columns{
+  width: 100%;
+  text-align: center;
   display:flex;
   margin:0 auto;
   flex-box: sizing;
+  justify-contents: center;
 }
 
 .column{
+  display: inline-box;
   font-weight: 700px;
   text-align: center;
 }
