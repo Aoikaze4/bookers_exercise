@@ -3,7 +3,8 @@
 
   <% if @book.errors.any? %>
    <div>
-     <ul style="color:red">
+     <p class="error-message">error!</p>
+     <ul class="error-table">
        <% @book.errors.full_messages.each do |message| %>
          <li><%= message %></li>
        <% end %>

@@ -10,6 +10,17 @@
   margin:33px;
 }
 
+.error-message{
+  color:red;
+  font-size:26px;
+  margin-left: :33px;
+}
+
+.error-table{
+  color:red;
+  margin:0px 33px 33px 33px;
+}
+
 h1{
   font-size: 26px;
   margin:17px 0px;
