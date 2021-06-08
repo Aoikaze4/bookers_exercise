@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size:13px;
 }
 
 h1{
@@ -10,6 +11,7 @@ h1{
 
 .bookers-title{
   font-weight: 900;
+  font-size:26px;
 }
 
 body{
@@ -25,13 +27,42 @@ body{
   margin:33px;
 }
 
-.link{
+.home-link{
   margin:33px;
   color :#666666;
 }
 
-.link:hover{
+.home-link:hover,.link:hover{
   color: white;
   background-color: black;
 }
 
+/* for index.html.erb */
+
+th{
+  padding:1px 1px 5px;
+}
+
+td{
+  padding:1px 5px 7px;
+}
+
+.link{
+  color:#000;
+  font-size:13px;
+}
+
+.create-heading{
+  font-size: 19px;
+  margin:16px 0px;
+}
+
+.create-field{
+  margin-bottom:10px
+}
+
+.create-submit{
+  margin-bottom: 10px
+}
+
+/* edit.html.erb

@@ -1,33 +1,37 @@
 <body>
 <h1>Books</h1>
 
-<div class="columns">
-  <div class="column">Title</div>
-  <div class="column">Body</div>
-  <div class="column"></div>
-</div>
+<table class="columns">
+  <tr>
+    <th class="column">Title</th>
+    <th class="column">Body</th>
+    <th class="column"></th>
+  </tr>
 
-  <div class="table">
+  <div class="book-table">
     <% @books.each do |book| %>
-      <div class="book-title"><%= book.title %></div>
-      <div class="book-body"><%= book.body %></div>
-      <%=link_to "Show", book_path(book.id), class:"link" %>
-      <%=link_to "Edit", edit_book_path(book.id), class:"link" %>
-      <%=link_to "Destroy", book_path(book.id), method: :delete, class:"link","data-confirm" => "Are you Sure?" %>
+      <tr>
+        <td class="book-title"><%= book.title %></td>
+        <td class="book-body"><%= book.body %></td>
+        <td><%=link_to "Show", book_path(book.id), class:"link" %></td>
+        <td><%=link_to "Edit", edit_book_path(book.id), class:"link" %></td>
+        <td><%=link_to "Destroy", book_path(book.id), method: :delete, class:"link","data-confirm" => "Are you Sure?" %></td>
+      </tr>
     <% end %>
   </div>
+ </table>
 
 <div class="create-box">
-  <div class="create-title">
-    <h2>New book</h2>
+  <div class="create-title-box">
+    <h2 class="create-heading">New book</h2>
   </div>
 
   <div class="create-form">
     <%=form_with model:@book, local:true do |book| %>
-    <p class="title">Title</p>
-    <%=book.text_field :title %>
-    <p class="Body">Body</p>
-    <%=book.text_area :body %>
+    <p class="create-title">Title</p>
+    <%=book.text_field :title, class:"create-field"%>
+    <p class="create-Body">Body</p>
+    <%=book.text_area :body, class:"create-field"%>
   </div>
 
   <div class="create-submit">

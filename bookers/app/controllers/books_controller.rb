@@ -38,7 +38,5 @@ class BooksController < ApplicationController
   private
   def book_params
     params.require(:book).permit(:title,:body)
-    #.require(:book) エラー解決のため一度削除→記載するとUpdateはうまくいく
-    #ないとCreateがうまくいかない…
   end
 end

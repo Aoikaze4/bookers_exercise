@@ -1,12 +1,13 @@
 <h1 class="heading">Editing Book</h1>
 <%= form_with model:@book, local:true do |book| %>
   <p class="title">Title</p>
-  <%= book.text_field :title %>
+  <%= book.text_field :title, class:"create-field" %>
   <p class="body">Body</p>
-  <%= book.text_area :body %>
+  <%= book.text_area :body, class:"create-field" %>
 
   <%= book.submit "Update Book" %>
 <% end %>
 
 <%= link_to "Show", book_path(params[:id]) %>
+<p class="assist"> | </p>
 <%= link_to "Back", books_path %>
