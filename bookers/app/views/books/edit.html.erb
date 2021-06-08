@@ -1,5 +1,16 @@
 <body>
   <h1 class="heading">Editing Book</h1>
+
+  <% if @book.errors.any? %>
+   <div>
+     <ul style="color:red">
+       <% @book.errors.full_messages.each do |message| %>
+         <li><%= message %></li>
+       <% end %>
+     </ul>
+   </div>
+  <% end %>
+
     <div class="edit-box">
     <%= form_with model:@book, local:true do |book| %>
       <p class="title">Title</p>
