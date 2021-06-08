@@ -26,6 +26,16 @@
     <h2 class="create-heading">New book</h2>
   </div>
 
+<% if @book.errors.any? %>
+ <div>
+   <ul style="color:red">
+     <% @book.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+     <% end %>
+   </ul>
+ </div>
+<% end %>
+
   <div class="create-form">
     <%=form_with model:@book, local:true do |book| %>
     <p class="create-title">Title</p>
@@ -35,7 +45,7 @@
   </div>
 
   <div class="actions">
-    <%=book.submit 'Create Book' %>
+    <%=book.submit 'Create Book', method: :create %>
   </div>
 <% end %>
 </div>
