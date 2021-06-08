@@ -29,12 +29,12 @@
   <div class="create-form">
     <%=form_with model:@book, local:true do |book| %>
     <p class="create-title">Title</p>
-    <%=book.text_field :title, class:"create-field"%>
+    <%=book.text_field :title, class:"field"%>
     <p class="create-Body">Body</p>
-    <%=book.text_area :body, class:"create-field"%>
+    <%=book.text_area :body, class:"field"%>
   </div>
 
-  <div class="create-submit">
+  <div class="actions">
     <%=book.submit 'Create Book' %>
   </div>
 <% end %>

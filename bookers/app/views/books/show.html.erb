@@ -1,5 +1,11 @@
-<div class="show-title">Title: <%= @book.title %></div>
-<div class="show-body">Body: <%= @book.body %></div>
+<body>
+    <div class="show-title"><strong>Title: </strong><%= @book.title %></div>
+    <div class="show-body"><strong>Body: </strong><%= @book.body %></div>
 
-<%=link_to "edit", edit_book_path(params[:id]) %>
-<%=link_to "Back", books_path %>
+    <div class="show-link">
+        <%=link_to "Edit", edit_book_path(params[:id]), class:"link" %>
+         |
+        <%=link_to "Back", books_path, class:"link" %>
+    </div>
+
+</body>

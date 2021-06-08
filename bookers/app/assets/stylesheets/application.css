@@ -5,8 +5,15 @@
   font-size:13px;
 }
 
+#flash-message-box{
+  color:green;
+  margin:33px;
+}
+
 h1{
   font-size: 26px;
+  margin:17px 0px;
+  font-weight: bold;
 }
 
 .bookers-title{
@@ -57,12 +64,15 @@ td{
   margin:16px 0px;
 }
 
-.create-field{
+.field{
   margin-bottom:10px
 }
 
-.create-submit{
+.actions{
   margin-bottom: 10px
 }
 
-/* edit.html.erb
+/* show.html.erb */
+.show-title,.show-body{
+  margin:33px;
+}
