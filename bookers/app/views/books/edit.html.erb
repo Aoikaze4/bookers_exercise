@@ -18,11 +18,12 @@
       <%= book.text_field :title, class:"field" %>
       <p class="body">Body</p>
       <%= book.text_area :body, class:"field" %>
+      <div class="actions">
+        <%= book.submit "Update Book" %>
+      </div>
     </div>
-    <div class="actions">
-      <%= book.submit "Update Book" %>
-    </div>
-  <% end %>
+
+     <% end %>
 
   <div class="edit-link">
     <%= link_to "Show", book_path(params[:id]), class:"link" %>

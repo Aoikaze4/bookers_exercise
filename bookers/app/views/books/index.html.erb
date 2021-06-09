@@ -35,19 +35,22 @@
      <% end %>
    </ul>
  </div>
+
 <% end %>
 
   <div class="create-form">
-    <%=form_with model:@book, local:true do |book| %>
+    <%= form_with model:@book, local:true do |f| %>
     <p class="create-title">Title</p>
-    <%=book.text_field :title, class:"field"%>
+    <%= f.text_field :title, class:"field" %>
     <p class="create-Body">Body</p>
-    <%=book.text_area :body, class:"field"%>
+    <%= f.text_area :body, class:"field" %>
+
+    <div class="actions">
+      <%= f.submit 'Create Book' %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%=book.submit 'Create Book', method: :create %>
-  </div>
+
 <% end %>
 </div>
 
